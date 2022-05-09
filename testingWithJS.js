@@ -19,7 +19,10 @@ dbMock = [
     'awesomecats.com'
 ];
 
-
+//grouping all the tests together
+const allTests = () => {
+    console.log("here are all the tests grouped ")
+ 
 //syntax for jest it('some string here', ()={}) followed by the function to test
 // it('this is a test', ()=>{
 
@@ -96,6 +99,10 @@ console.log(testingMulti3())
 //testing null and undefined input
 console.log('testing null: ', JSON.stringify(googleSearch(null, dbMock)) === JSON.stringify([]))
 console.log('testing undefined: ', JSON.stringify(googleSearch(undefined, dbMock)) === JSON.stringify([]))
+  return (
+      'string to represent the end of the list of tests'
+  )  
+}
 
-
+console.log(allTests())
 

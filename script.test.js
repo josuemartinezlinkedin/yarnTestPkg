@@ -23,15 +23,19 @@ dbMock = [
 // it('this is a test', ()=>{
 
 // })
-//******* testing anotherSearch function */
+//******* testing anotherSearch function ************//
+describe('anotherSearch', () => {
 it('test for anotherSearch', () => {
     anotherSearch('soups', dbMock)
 });
 test('testing anotherSearch', () => {
     expect(anotherSearch('soups', dbMock)).toStrictEqual(['awesomesoups.com'])
 });
+});
 
-//******* testing googleSearch function */
+
+//******* testing googleSearch function ***********//
+describe('googleSearch',() =>{
 it('test for googleSearch', () => {
     googleSearch('soups', dbMock)
 });
@@ -57,4 +61,5 @@ test('more tests for googleSearch', () => {
 
 });
 
+})
 
