@@ -23,21 +23,30 @@ dbMock = [
 // it('this is a test', ()=>{
 
 // })
-it('test for googleSearch', () => {
-    googleSearch('soups', dbMock)
-});
-
+//******* testing anotherSearch function */
 it('test for anotherSearch', () => {
     anotherSearch('soups', dbMock)
 });
+test('testing anotherSearch', () => {
+    expect(anotherSearch('soups', dbMock)).toStrictEqual(['awesomesoups.com'])
+});
 
+//******* testing googleSearch function */
+it('test for googleSearch', () => {
+    googleSearch('soups', dbMock)
+});
 test('testing googleSearch', () => {
     expect(googleSearch('oohh', dbMock)).toEqual(['oohhcats.com']);
 });
 
-test('test for googleSearch', () => {
+test('test2 for googleSearch', () => {
     expect(googleSearch('soup', dbMock)).toEqual(['allsouprecipes.com','awesomesoups.com']);
 });
-test('testing anotherSearch', () => {
-    expect(anotherSearch('soups', dbMock)).toStrictEqual(['awesomesoups.com'])
+
+//more than one test inside of one test method
+test('more tests for googleSearch', () => {
+    expect(googleSearch('soup', dbMock)).toEqual(['allsouprecipes.com', 'awesomesoups.com']);
+    expect(googleSearch('cookie', dbMock)).toEqual([]);
+    expect(googleSearch('cats', dbMock)).toEqual(['oohhcats.com', 'awesomecats.com']);
+    expect(googleSearch('awesome', dbMock)).toEqual(['awesomesoups.com', 'awesomepets.com', 'awesomedogs.com']);
 });

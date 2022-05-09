@@ -20,7 +20,7 @@ const googleSearch = (searchInput, aDatabase) => {
     const matches = aDatabase.filter(website => {
         return website.includes(searchInput)
     })
-    //return matches to the user
+    //return matches to the user, just up to the top 3 tho
     return matches.length > 3 ? matches.slice(0,3) : matches;
 };
 
