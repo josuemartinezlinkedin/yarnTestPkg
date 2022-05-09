@@ -93,3 +93,9 @@ const testingMulti3 = () => {
 }
 console.log(testingMulti3())
 
+//testing null and undefined input
+console.log('testing null: ', JSON.stringify(googleSearch(null, dbMock)) === JSON.stringify([]))
+console.log('testing undefined: ', JSON.stringify(googleSearch(undefined, dbMock)) === JSON.stringify([]))
+
+
+

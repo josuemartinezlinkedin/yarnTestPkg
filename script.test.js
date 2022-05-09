@@ -52,6 +52,9 @@ test('more tests for googleSearch', () => {
     //testing for undefined, and null input
     expect(googleSearch(undefined, dbMock)).toEqual([]);
     expect(googleSearch(null, dbMock)).toEqual([]);
+    //testing that length doesn't exceed 3 returned values in an array
+    expect(googleSearch('awesome', dbMock).length).toBe(3);
+
 });
 
 
