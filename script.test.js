@@ -49,4 +49,9 @@ test('more tests for googleSearch', () => {
     expect(googleSearch('cookie', dbMock)).toEqual([]);
     expect(googleSearch('cats', dbMock)).toEqual(['oohhcats.com', 'awesomecats.com']);
     expect(googleSearch('awesome', dbMock)).toEqual(['awesomesoups.com', 'awesomepets.com', 'awesomedogs.com']);
+    //testing for undefined, and null input
+    expect(googleSearch(undefined, dbMock)).toEqual([]);
+    expect(googleSearch(null, dbMock)).toEqual([]);
 });
+
+
