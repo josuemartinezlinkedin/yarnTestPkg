@@ -7,9 +7,10 @@
     "jest": "^28.0.3"
   },
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "dependencies": {
-    "git": "^0.1.5"
+    "git": "^0.1.5",
+    "lodash": "^4.17.21"
   }
 }

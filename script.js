@@ -15,26 +15,31 @@ const googleDatabase = [
     'amazingcats.com'
 ]
 
-const googleSearch = (searchInput) => {
+const googleSearch = (searchInput, aDatabase) => {
     // idea is search something, and if a match, return it
-    const matches = googleDatabase.filter(website => {
+    const matches = aDatabase.filter(website => {
         return website.includes(searchInput)
     })
     //return matches to the user
     return matches.length > 3 ? matches.slice(0,3) : matches;
-}
+};
+
 // created search twice just to edit it a bit before testing
-const anotherSearch = (word) => {
+const anotherSearch = (keyword, aDatabase) => {
     const matches = []
     matches.push(
-        googleDatabase.filter(items => items.includes(word)
+        aDatabase.filter(items => items.includes(keyword)
     ));
     return matches[0].length > 2 ?
      `Top two results, like actually the top two na\n${matches[0].slice(0, 1)} and ${matches[0].slice(1, 2)}` 
         : `Top notch result eh ${ matches[0]}`
-}
+};
 
-console.log(googleSearch('soup'))
-console.log(anotherSearch('soup'))
+//checking if returned value is an array
+// console.log(Array.isArray(googleSearch('soup', googleDatabase)))
 
-module.exports = [googleSearch, anotherSearch]
+// console.log(anotherSearch('soup', googleDatabase))
+
+module.exports = googleSearch;
+//could also export the database but too costly for testing if we had the database 
+//also being used there to test one function
