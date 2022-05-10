@@ -10,7 +10,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "git": "^0.1.5",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.4"
   }
 }
